@@ -1,7 +1,7 @@
 import cv2
 
-
-def face_recognition(camera_index=0, classifier_path=None, window_name= 'SHOW', frame_rate=10, stop_button='s'):
+# detect a face in an image  
+def face_detect(camera_index=0, classifier_path=None, window_name= 'SHOW', frame_rate=10, stop_button='s'):
     cap = cv2.VideoCapture(camera_index)
 
     if classifier_path is not None:
@@ -21,7 +21,7 @@ def face_recognition(camera_index=0, classifier_path=None, window_name= 'SHOW', 
         cv2.destroyAllWindows()
         cap.release()
 
-
+        
 def capture_image(camera_index=0, window_name="SHOW", frame_rate=10, capture_button='c', stop_button='s'):
     cap = cv2.VideoCapture(camera_index)
     counter = 0
